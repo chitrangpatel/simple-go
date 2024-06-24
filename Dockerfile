@@ -6,6 +6,6 @@ WORKDIR /usr/src/app
 COPY . .
 
 RUN go mod download && go mod verify
-RUN go build -v -o /usr/bin/simple-go ./...
+RUN go build -v -o /usr/bin/simple-go main.go
 
 CMD ["simple-go"]
